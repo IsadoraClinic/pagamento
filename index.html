@@ -524,18 +524,10 @@
       document.getElementById("code").value = KEY;
       document.getElementById("pix-key-display").textContent = PIX_KEY;
 
-      // [nome, pacote Android, esquema iOS] — mantidos do código enviado.
+      // Somente os bancos solicitados: PicPay e Inter.
       var BANKS = [
-        ["Nubank", "com.nu.production", "nubank://"],
-        ["Caixa", "br.com.gabba.Caixa", "caixa://"],
-        ["Banco do Brasil", "br.com.bb.android", "bbapp://"],
-        ["Inter", "br.com.intermedium", "bancointer://"],
-        ["Bradesco", "com.bradesco", "bradesco://"],
-        ["Itaú", "com.itau", "itau://"],
-        ["Mercado Pago", "com.mercadopago.wallet", "mercadopago://"],
-        ["Santander", "com.santander.app", "santander://"],
         ["PicPay", "com.picpay", "picpay://"],
-        ["PagBank", "br.com.uol.ps.myaccount", "pagbank://"],
+        ["Inter", "br.com.intermedium", "bancointer://"],
       ];
       var ua = navigator.userAgent || "";
       var IS_ANDROID = /Android/i.test(ua);
